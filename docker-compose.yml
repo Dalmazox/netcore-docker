@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  koshy.api:
+    container_name: koshyapi_dev
+    image: koshyapi:dev
+    build:
+      context: .
+      dockerfile: ./.docker/Development.Dockerfile
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+    volumes:
+      - "./:/app"
